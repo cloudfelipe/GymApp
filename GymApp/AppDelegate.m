@@ -8,6 +8,8 @@
 
 #import "AppDelegate.h"
 
+#import "User.h"
+
 @interface AppDelegate ()
 
 @end
@@ -17,6 +19,48 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    
+    
+    //Test
+    NSManagedObjectContext *context = [self managedObjectContext];
+    
+    /**
+    
+    User* anUser = [NSEntityDescription insertNewObjectForEntityForName:@"User" inManagedObjectContext:context];
+    anUser.name = @"Felipe";
+    anUser.lastsname = @"Correa";
+    anUser.idNumber = [NSNumber numberWithInteger:12345];
+    anUser.age = [NSNumber numberWithInteger:22];
+    anUser.phone = [NSNumber numberWithInteger:30030030030];
+    anUser.occupation = @"Estudiante";
+    
+    anUser.email = @"cloud@gmail.com";
+    anUser.address = @"cr 43 b sur";
+    anUser.eps = @"Coomeva";
+    anUser.password = @"123";
+    
+    NSError *error;
+    if (![context save:&error]) {
+        NSLog(@"Nooo, error al grabar: %@", [error localizedDescription]);
+    }
+    
+    
+    
+    // Test listing all FailedBankInfos from the store
+    
+    NSError *error;
+    NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
+    NSEntityDescription *entity = [NSEntityDescription entityForName:@"User"
+                                              inManagedObjectContext:context];
+    [fetchRequest setEntity:entity];
+    NSArray *fetchedObjects = [context executeFetchRequest:fetchRequest error:&error];
+    
+    for (User *user in fetchedObjects) {
+        NSLog(@"Name: %@", user.name);
+    }
+     
+     **/
+    
     return YES;
 }
 

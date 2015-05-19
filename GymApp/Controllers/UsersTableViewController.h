@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  UsersTableViewController.h
 //  GymApp
 //
 //  Created by Felipe Correa on 18/05/15.
@@ -8,9 +8,11 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
+@interface UsersTableViewController : UITableViewController
 
-- (IBAction)signinBtn:(id)sender;
+
+@property (nonatomic, strong) NSArray *users;
+
+
 
 @end
-

@@ -15,6 +15,12 @@
 		553585F71B0AAC980062F6C9 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 553585F61B0AAC980062F6C9 /* Images.xcassets */; };
 		553585FA1B0AAC980062F6C9 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 553585F81B0AAC980062F6C9 /* LaunchScreen.xib */; };
 		553586061B0AAC980062F6C9 /* GymAppTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 553586051B0AAC980062F6C9 /* GymAppTests.m */; };
+		553586161B0ABAAB0062F6C9 /* MAFormField.m in Sources */ = {isa = PBXBuildFile; fileRef = 553586111B0ABAAB0062F6C9 /* MAFormField.m */; };
+		553586171B0ABAAB0062F6C9 /* MAFormViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 553586131B0ABAAB0062F6C9 /* MAFormViewController.m */; };
+		553586181B0ABAAB0062F6C9 /* MATextFieldCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 553586151B0ABAAB0062F6C9 /* MATextFieldCell.m */; };
+		5535861E1B0AC2BA0062F6C9 /* CorporalSummary.m in Sources */ = {isa = PBXBuildFile; fileRef = 5535861D1B0AC2BA0062F6C9 /* CorporalSummary.m */; };
+		553586241B0AC4D90062F6C9 /* UsersTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 553586231B0AC4D90062F6C9 /* UsersTableViewController.m */; };
+		553586271B0ADF070062F6C9 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = 553586261B0ADF070062F6C9 /* User.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,6 +48,18 @@
 		553585FF1B0AAC980062F6C9 /* GymAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GymAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		553586041B0AAC980062F6C9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		553586051B0AAC980062F6C9 /* GymAppTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GymAppTests.m; sourceTree = "<group>"; };
+		553586101B0ABAAB0062F6C9 /* MAFormField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MAFormField.h; sourceTree = "<group>"; };
+		553586111B0ABAAB0062F6C9 /* MAFormField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MAFormField.m; sourceTree = "<group>"; };
+		553586121B0ABAAB0062F6C9 /* MAFormViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MAFormViewController.h; sourceTree = "<group>"; };
+		553586131B0ABAAB0062F6C9 /* MAFormViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MAFormViewController.m; sourceTree = "<group>"; };
+		553586141B0ABAAB0062F6C9 /* MATextFieldCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MATextFieldCell.h; sourceTree = "<group>"; };
+		553586151B0ABAAB0062F6C9 /* MATextFieldCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MATextFieldCell.m; sourceTree = "<group>"; };
+		5535861C1B0AC2BA0062F6C9 /* CorporalSummary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CorporalSummary.h; path = Model/DAO/CorporalSummary.h; sourceTree = "<group>"; };
+		5535861D1B0AC2BA0062F6C9 /* CorporalSummary.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CorporalSummary.m; path = Model/DAO/CorporalSummary.m; sourceTree = "<group>"; };
+		553586221B0AC4D90062F6C9 /* UsersTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UsersTableViewController.h; path = Controllers/UsersTableViewController.h; sourceTree = "<group>"; };
+		553586231B0AC4D90062F6C9 /* UsersTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UsersTableViewController.m; path = Controllers/UsersTableViewController.m; sourceTree = "<group>"; };
+		553586251B0ADF070062F6C9 /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = User.h; path = Model/DAO/User.h; sourceTree = "<group>"; };
+		553586261B0ADF070062F6C9 /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = User.m; path = Model/DAO/User.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +101,9 @@
 		553585E51B0AAC980062F6C9 /* GymApp */ = {
 			isa = PBXGroup;
 			children = (
+				553586211B0AC4A30062F6C9 /* Controllers */,
+				5535861F1B0AC2C50062F6C9 /* Model */,
+				5535860F1B0ABA930062F6C9 /* MAFormControllers */,
 				553585EA1B0AAC980062F6C9 /* AppDelegate.h */,
 				553585EB1B0AAC980062F6C9 /* AppDelegate.m */,
 				553585F01B0AAC980062F6C9 /* ViewController.h */,
@@ -120,6 +141,47 @@
 				553586041B0AAC980062F6C9 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		5535860F1B0ABA930062F6C9 /* MAFormControllers */ = {
+			isa = PBXGroup;
+			children = (
+				553586101B0ABAAB0062F6C9 /* MAFormField.h */,
+				553586111B0ABAAB0062F6C9 /* MAFormField.m */,
+				553586121B0ABAAB0062F6C9 /* MAFormViewController.h */,
+				553586131B0ABAAB0062F6C9 /* MAFormViewController.m */,
+				553586141B0ABAAB0062F6C9 /* MATextFieldCell.h */,
+				553586151B0ABAAB0062F6C9 /* MATextFieldCell.m */,
+			);
+			name = MAFormControllers;
+			sourceTree = "<group>";
+		};
+		5535861F1B0AC2C50062F6C9 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				553586201B0AC2CB0062F6C9 /* DAO */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		553586201B0AC2CB0062F6C9 /* DAO */ = {
+			isa = PBXGroup;
+			children = (
+				553586251B0ADF070062F6C9 /* User.h */,
+				553586261B0ADF070062F6C9 /* User.m */,
+				5535861C1B0AC2BA0062F6C9 /* CorporalSummary.h */,
+				5535861D1B0AC2BA0062F6C9 /* CorporalSummary.m */,
+			);
+			name = DAO;
+			sourceTree = "<group>";
+		};
+		553586211B0AC4A30062F6C9 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				553586221B0AC4D90062F6C9 /* UsersTableViewController.h */,
+				553586231B0AC4D90062F6C9 /* UsersTableViewController.m */,
+			);
+			name = Controllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -171,6 +233,7 @@
 				TargetAttributes = {
 					553585E21B0AAC980062F6C9 = {
 						CreatedOnToolsVersion = 6.1.1;
+						DevelopmentTeam = 59758JPHYA;
 					};
 					553585FE1B0AAC980062F6C9 = {
 						CreatedOnToolsVersion = 6.1.1;
@@ -222,10 +285,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				553586271B0ADF070062F6C9 /* User.m in Sources */,
 				553585EF1B0AAC980062F6C9 /* GymApp.xcdatamodeld in Sources */,
+				553586161B0ABAAB0062F6C9 /* MAFormField.m in Sources */,
+				5535861E1B0AC2BA0062F6C9 /* CorporalSummary.m in Sources */,
 				553585EC1B0AAC980062F6C9 /* AppDelegate.m in Sources */,
 				553585F21B0AAC980062F6C9 /* ViewController.m in Sources */,
+				553586241B0AC4D90062F6C9 /* UsersTableViewController.m in Sources */,
+				553586171B0ABAAB0062F6C9 /* MAFormViewController.m in Sources */,
 				553585E91B0AAC980062F6C9 /* main.m in Sources */,
+				553586181B0ABAAB0062F6C9 /* MATextFieldCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -347,6 +416,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = GymApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -357,6 +427,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = GymApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
