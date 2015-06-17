@@ -10,6 +10,28 @@
         <attribute name="waist" optional="YES" attributeType="Decimal" defaultValueString="0.0" syncable="YES"/>
         <attribute name="weight" optional="YES" attributeType="Double" defaultValueString="0" syncable="YES"/>
         <relationship name="owner" optional="YES" maxCount="1" deletionRule="Cascade" destinationEntity="User" inverseName="corporalsummaries" inverseEntity="User" syncable="YES"/>
+        <relationship name="performed" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Therapist" inverseName="perform" inverseEntity="Therapist" syncable="YES"/>
+    </entity>
+    <entity name="Routine" syncable="YES">
+        <relationship name="owner" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="User" inverseName="routines" inverseEntity="User" syncable="YES"/>
+        <relationship name="performed" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Trainer" inverseName="make" inverseEntity="Trainer" syncable="YES"/>
+    </entity>
+    <entity name="Therapist" syncable="YES">
+        <attribute name="email" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="lastname" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="password" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="phone" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="asses" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="User" inverseName="assesor" inverseEntity="User" syncable="YES"/>
+        <relationship name="perform" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="CorporalSummary" inverseName="performed" inverseEntity="CorporalSummary" syncable="YES"/>
+    </entity>
+    <entity name="Trainer" syncable="YES">
+        <attribute name="email" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="latname" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="phone" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="make" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Routine" inverseName="performed" inverseEntity="Routine" syncable="YES"/>
+        <relationship name="trains" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="User" inverseName="trainer" inverseEntity="User" syncable="YES"/>
     </entity>
     <entity name="User" representedClassName="User" syncable="YES">
         <attribute name="address" optional="YES" attributeType="String" syncable="YES"/>
@@ -23,10 +45,16 @@
         <attribute name="occupation" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="password" optional="YES" attributeType="String" minValueString="3" syncable="YES"/>
         <attribute name="phone" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <relationship name="assesor" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Therapist" inverseName="asses" inverseEntity="Therapist" syncable="YES"/>
         <relationship name="corporalsummaries" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="CorporalSummary" inverseName="owner" inverseEntity="CorporalSummary" syncable="YES"/>
+        <relationship name="routines" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Routine" inverseName="owner" inverseEntity="Routine" syncable="YES"/>
+        <relationship name="trainer" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Trainer" inverseName="trains" inverseEntity="Trainer" syncable="YES"/>
     </entity>
     <elements>
-        <element name="User" positionX="-5004" positionY="-2655" width="128" height="223"/>
-        <element name="CorporalSummary" positionX="-4808" positionY="-2659" width="128" height="178"/>
+        <element name="CorporalSummary" positionX="-5159" positionY="-8649" width="128" height="193"/>
+        <element name="User" positionX="-5364" positionY="-8694" width="128" height="268"/>
+        <element name="Trainer" positionX="-5661" positionY="-8632" width="128" height="133"/>
+        <element name="Therapist" positionX="-5348" positionY="-8370" width="128" height="148"/>
+        <element name="Routine" positionX="-5616" positionY="-8383" width="128" height="73"/>
     </elements>
 </model>
