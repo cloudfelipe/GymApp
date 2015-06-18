@@ -12,13 +12,19 @@
 #import <ActionSheetStringPicker.h>
 
 @interface CorporalSummaryTableViewController (){
-//    NSInteger selectedValue2;
-//    NSInteger selectedValue;
+    NSInteger selectedValue2;
+    NSInteger selectedValue;
+    
+    NSInteger selectedCellIndex;
     
     NSArray* trainersArray;
     
     float arm, thigh, thorax, waist, weight, carfialFrecuence;
+    
+    NSArray* weightsArray, *cardialFrecsArray;
 }
+
+- (void)measurementWasSelectedWithBigUnit:(NSNumber *)bigUnit smallUnit:(NSNumber *)smallUnit element:(id)element;
 
 @end
 
@@ -33,6 +39,16 @@
     waist = 0.0;
     weight = 0.0;
     carfialFrecuence = 0.0;
+    
+    //Creates the array
+    
+    NSMutableArray* arrayAux = [[NSMutableArray alloc]init];
+    for (int i = 39; i < 150; i++) {
+        [arrayAux addObject:[NSString stringWithFormat:@"%d", i+1]];
+    }
+    
+    weightsArray = [arrayAux copy];
+    cardialFrecsArray = [arrayAux copy];
     
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
@@ -68,28 +84,87 @@
         switch (indexPath.row) {
             case 0:
             {
+                [ActionSheetDistancePicker showPickerWithTitle:@"Seleccione medida" bigUnitString:@"cm" bigUnitMax:99 selectedBigUnit:selectedValue smallUnitString:@"mm" smallUnitMax:99 selectedSmallUnit:selectedValue2 target:self action:@selector(measurementWasSelectedWithBigUnit:smallUnit:element:) origin:self.armTCell];
                 
-                self.armTCell.detailTextLabel.text = @"Test";
+                selectedCellIndex = 0;
                 
-//                [ActionSheetDistancePicker showPickerWithTitle:@"Seleccione medida" bigUnitString:@"cm" bigUnitMax:99 selectedBigUnit:selectedValue smallUnitString:@"mm" smallUnitMax:99 selectedSmallUnit:selectedValue2 target:self action:nil origin:tableView];
+            }
+                break;
+            case 1:
+            {
+                [ActionSheetDistancePicker showPickerWithTitle:@"Seleccione medida" bigUnitString:@"cm" bigUnitMax:99 selectedBigUnit:selectedValue smallUnitString:@"mm" smallUnitMax:99 selectedSmallUnit:selectedValue2 target:self action:@selector(measurementWasSelectedWithBigUnit:smallUnit:element:) origin:self.thighTCell];
+                selectedCellIndex = 1;
+            }
+                break;
+            case 2:
+            {
+                [ActionSheetDistancePicker showPickerWithTitle:@"Seleccione medida" bigUnitString:@"cm" bigUnitMax:99 selectedBigUnit:selectedValue smallUnitString:@"mm" smallUnitMax:99 selectedSmallUnit:selectedValue2 target:self action:@selector(measurementWasSelectedWithBigUnit:smallUnit:element:) origin:self.thoraxTCell];
+                selectedCellIndex = 2;
+            }
+                break;
+            case 3:
+            {
+                [ActionSheetDistancePicker showPickerWithTitle:@"Seleccione medida" bigUnitString:@"cm" bigUnitMax:99 selectedBigUnit:selectedValue smallUnitString:@"mm" smallUnitMax:99 selectedSmallUnit:selectedValue2 target:self action:@selector(measurementWasSelectedWithBigUnit:smallUnit:element:) origin:self.waistTCell];
+                selectedCellIndex = 3;
+            }
+                break;
+            case 4:
+            {
+                selectedCellIndex = 4;
+                
+                [ActionSheetStringPicker showPickerWithTitle:@"Seleccione peso (Kg)"
+                                                        rows:weightsArray
+                                            initialSelection:0
+                                                   doneBlock:^(ActionSheetStringPicker *picker, NSInteger selectedIndex, id selectedValuee) {
+                                                       
+                                                       self.weightTCell.detailTextLabel.text = [NSString stringWithFormat:@"%@ Kg", selectedValuee];
+                                                       
+                                                       weight = [selectedValuee floatValue];
+                                                       
+                                                   }
+                                                 cancelBlock:^(ActionSheetStringPicker *picker) {
+                                                     
+                                                     self.weightTCell.selected = NO;
+                                                 }
+                                                      origin:self.weightTCell];
+            }
+                break;
+            case 5:
+            {
+                
+                [ActionSheetStringPicker showPickerWithTitle:@"Seleccione Frec Card (PPM)"
+                                                        rows:cardialFrecsArray
+                                            initialSelection:0
+                                                   doneBlock:^(ActionSheetStringPicker *picker, NSInteger selectedIndex, id selectedValuee) {
+                                                       
+                                                       self.cardialFrecTCell.detailTextLabel.text = [NSString stringWithFormat:@"%@ PPM", selectedValuee];
+                                                       
+                                                       carfialFrecuence = [selectedValuee floatValue];
+                                                       
+                                                   }
+                                                 cancelBlock:^(ActionSheetStringPicker *picker) {
+                                                     
+                                                     self.cardialFrecTCell.selected = NO;
+                                                 }
+                                                      origin:self.cardialFrecTCell];
+                
+                
+                selectedCellIndex = 5;
             }
                 break;
                 
             default:
-//                [ActionSheetDistancePicker showPickerWithTitle:@"Seleccione medida" bigUnitString:@"cm" bigUnitMax:99 selectedBigUnit:selectedValue smallUnitString:@"mm" smallUnitMax:99 selectedSmallUnit:selectedValue2 target:self action:nil origin:tableView];
                 break;
         }
         
     }else if (indexPath.section == 1){
         
-//        [ActionSheetStringPicker showPickerWithTitle:<#(NSString *)#> rows:<#(NSArray *)#> initialSelection:<#(NSInteger)#> target:<#(id)#> successAction:<#(SEL)#> cancelAction:<#(SEL)#> origin:<#(id)#>]
-        
         [ActionSheetStringPicker showPickerWithTitle:@"Seleccione instructor"
                                                 rows:trainersArray
                                     initialSelection:0
-                                           doneBlock:^(ActionSheetStringPicker *picker, NSInteger selectedIndex, id selectedValue) {
+                                           doneBlock:^(ActionSheetStringPicker *picker, NSInteger selectedIndex, id selectedValuee) {
                                                
-                                               self.trainerTCell.detailTextLabel.text = (NSString*)selectedValue;
+                                               self.trainerTCell.detailTextLabel.text = (NSString*)selectedValuee;
 
                                            }
                                          cancelBlock:^(ActionSheetStringPicker *picker) {
@@ -99,6 +174,42 @@
                                               origin:tableView];
         
     }
+}
+
+- (void)measurementWasSelectedWithBigUnit:(NSNumber *)bigUnit smallUnit:(NSNumber *)smallUnit element:(id)element {
+    
+    NSString* numberConcatStr = [NSString stringWithFormat:@"%ld.%ld", (long)[bigUnit intValue], (long)[smallUnit intValue]];
+    float numberConcat = [numberConcatStr floatValue];
+    
+    [[(UITableViewCell*)element detailTextLabel] setText:[NSString stringWithFormat:@"%@ cm", numberConcatStr]];
+    
+    switch (selectedCellIndex) {
+        case 0:
+            arm = numberConcat;
+            break;
+        case 1:
+            thigh = numberConcat;
+            break;
+        case 2:
+            thorax = numberConcat;
+            break;
+        case 3:
+            waist = numberConcat;
+            break;
+        case 4:
+            weight = numberConcat;
+            break;
+        case 5:
+            carfialFrecuence = numberConcat;
+            break;
+            
+        default:
+            break;
+    }
+    
+    
+    //self.selectedSmallUnit = [smallUnit intValue];
+    //[element setText:[NSString stringWithFormat:@"%i m and %i cm", [bigUnit intValue], [smallUnit intValue]]];
 }
 
 -(void) refreshTableViewData{
