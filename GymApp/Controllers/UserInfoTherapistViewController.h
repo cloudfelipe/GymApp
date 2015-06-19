@@ -8,9 +8,11 @@
 
 #import "ViewController.h"
 
+#import "CorporalSummaryTableViewController.h"
+
 @class User;
 
-@interface UserInfoTherapistViewController : ViewController <UITableViewDataSource, UITableViewDelegate>
+@interface UserInfoTherapistViewController : ViewController <UITableViewDataSource, UITableViewDelegate, CorporalSummaryCtrlDelegate>
 
 /**
  *  Outlets
@@ -30,5 +32,6 @@
 
 @property (nonatomic, strong) User* anUser;
 
+- (IBAction)newCorpSumBtn:(id)sender;
 
 @end

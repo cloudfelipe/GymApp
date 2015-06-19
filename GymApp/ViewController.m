@@ -104,7 +104,7 @@
         }else{
             // do whatever you want with the results - you can access specific values from the dictionary using
             // the key you provided when you created the form
-            [[[UIAlertView alloc] initWithTitle:nil message:[NSString stringWithFormat:@"Thanks for registering %@!", resultDictionary[@"name"]] delegate:nil cancelButtonTitle:@"Yay!" otherButtonTitles:nil] show];
+            [[[UIAlertView alloc] initWithTitle:nil message:[NSString stringWithFormat:@"Gracias por registrarse %@!", resultDictionary[@"name"]] delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil] show];
             NSLog(@"%@", [resultDictionary description]);
         }
         

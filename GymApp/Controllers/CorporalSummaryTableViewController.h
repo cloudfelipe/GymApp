@@ -8,7 +8,21 @@
 
 #import <UIKit/UIKit.h>
 
+@class CorporalSummaryTableViewController;
+@class CorporalSummary;
+
+@protocol CorporalSummaryCtrlDelegate <NSObject>
+
+@optional
+
+-(void) CorporalSummaryTableViewControllerDidSave: (CorporalSummaryTableViewController*) controller didNewCorporalSummary: (CorporalSummary*) aNewCorporalSummary;
+
+@end
+
 @interface CorporalSummaryTableViewController : UITableViewController
+
+//Delegate
+@property (nonatomic, weak) id <CorporalSummaryCtrlDelegate> delegate;
 
 //Section1
 @property (weak, nonatomic) IBOutlet UITableViewCell *armTCell;
@@ -23,5 +37,12 @@
 
 //Section3
 @property (weak, nonatomic) IBOutlet UITableViewCell *notesTCell;
+
+//Actions
+
+- (IBAction)saveBtn:(id)sender;
+
+- (IBAction)cancelBtn:(id)sender;
+
 
 @end

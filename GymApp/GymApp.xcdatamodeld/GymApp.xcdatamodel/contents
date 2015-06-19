@@ -12,11 +12,11 @@
         <relationship name="owner" optional="YES" maxCount="1" deletionRule="Cascade" destinationEntity="User" inverseName="corporalsummaries" inverseEntity="User" syncable="YES"/>
         <relationship name="performed" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Therapist" inverseName="perform" inverseEntity="Therapist" syncable="YES"/>
     </entity>
-    <entity name="Routine" syncable="YES">
+    <entity name="Routine" representedClassName="Routine" syncable="YES">
         <relationship name="owner" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="User" inverseName="routines" inverseEntity="User" syncable="YES"/>
         <relationship name="performed" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Trainer" inverseName="make" inverseEntity="Trainer" syncable="YES"/>
     </entity>
-    <entity name="Therapist" syncable="YES">
+    <entity name="Therapist" representedClassName="Therapist" syncable="YES">
         <attribute name="email" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="lastname" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
@@ -25,7 +25,7 @@
         <relationship name="asses" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="User" inverseName="assesor" inverseEntity="User" syncable="YES"/>
         <relationship name="perform" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="CorporalSummary" inverseName="performed" inverseEntity="CorporalSummary" syncable="YES"/>
     </entity>
-    <entity name="Trainer" syncable="YES">
+    <entity name="Trainer" representedClassName="Trainer" syncable="YES">
         <attribute name="email" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="latname" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
@@ -52,9 +52,9 @@
     </entity>
     <elements>
         <element name="CorporalSummary" positionX="-5159" positionY="-8649" width="128" height="193"/>
-        <element name="User" positionX="-5364" positionY="-8694" width="128" height="268"/>
-        <element name="Trainer" positionX="-5661" positionY="-8632" width="128" height="133"/>
-        <element name="Therapist" positionX="-5348" positionY="-8370" width="128" height="148"/>
         <element name="Routine" positionX="-5616" positionY="-8383" width="128" height="73"/>
+        <element name="Therapist" positionX="-5348" positionY="-8370" width="128" height="148"/>
+        <element name="Trainer" positionX="-5661" positionY="-8632" width="128" height="133"/>
+        <element name="User" positionX="-5364" positionY="-8694" width="128" height="268"/>
     </elements>
 </model>

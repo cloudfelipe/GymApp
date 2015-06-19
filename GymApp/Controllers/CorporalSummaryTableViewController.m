@@ -11,6 +11,9 @@
 #import <ActionSheetDistancePicker.h>
 #import <ActionSheetStringPicker.h>
 
+#import "AppDelegate.h"
+#import "CorporalSummary.h"
+
 @interface CorporalSummaryTableViewController (){
     NSInteger selectedValue2;
     NSInteger selectedValue;
@@ -233,4 +236,48 @@
 }
 */
 
+- (IBAction)saveBtn:(id)sender {
+    
+    AppDelegate *appDelegate = [[UIApplication sharedApplication] delegate];
+    NSManagedObjectContext *context = [appDelegate managedObjectContext];
+    
+    CorporalSummary* aCorporalSummary = [NSEntityDescription insertNewObjectForEntityForName:@"CorporalSummary" inManagedObjectContext:context];
+    
+    aCorporalSummary.arm = [NSNumber numberWithFloat:arm];
+//    aCorporalSummary.thigh = [NSDecimalNumber num];
+    aCorporalSummary.thorax = [NSNumber numberWithFloat:thorax];
+//    aCorporalSummary.waist = [NSNumber numberWithFloat:arm];
+    aCorporalSummary.weight = [NSNumber numberWithFloat:weight];
+    aCorporalSummary.additionalNote = @"";
+    
+    
+    NSDateFormatter *dateFormat = [[NSDateFormatter alloc] init];
+    [dateFormat setDateFormat:@"yyyy-MM-dd"];
+    
+    NSDate *now = [[NSDate alloc] init];
+    aCorporalSummary.date = now;
+    NSString *theDate = [dateFormat stringFromDate:now];
+    NSLog(@"HOy: %@", theDate);
+    
+    NSError *error;
+    if (![context save:&error]) {
+        NSLog(@"Nooo, error al grabar: %@", [error localizedDescription]);
+    }else{
+        // do whatever you want with the results - you can access specific values from the dictionary using
+        // the key you provided when you created the form
+        NSLog(@"%@", [aCorporalSummary weight]);
+        
+        [self.delegate CorporalSummaryTableViewControllerDidSave:self didNewCorporalSummary:aCorporalSummary];
+        
+        // now that we're done, dismiss the form
+        [self dismissViewControllerAnimated:YES completion:nil];
+    }
+   
+}
+
+- (IBAction)cancelBtn:(id)sender {
+    
+    // now that we're done, dismiss the form
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
 @end
