@@ -102,13 +102,15 @@
     NSDateFormatter *dateFormat = [[NSDateFormatter alloc] init];
     [dateFormat setDateFormat:@"yyyy-MM-dd"];
     NSDateFormatter *timeFormat = [[NSDateFormatter alloc] init];
-    [timeFormat setDateFormat:@"HH:mm:ss"];
+    [timeFormat setDateFormat:@"HH:mm"];
     
     CorporalSummary* corpSum = [userCorporalSummaries objectAtIndex:indexPath.row];
     NSString *theDate = [dateFormat stringFromDate:corpSum.date];
     NSString *theTime = [timeFormat stringFromDate:corpSum.date];
     
-    cell.textLabel.text = [NSString stringWithFormat:@"%@ - %@", theDate, theTime];
+    cell.textLabel.text = [NSString stringWithFormat:@"Resumen corporal: %@ - %@", theDate, theTime];
+    
+    
     
     return cell;
 }
@@ -160,5 +162,9 @@
 
 - (IBAction)newCorpSumBtn:(id)sender {
     [self performSegueWithIdentifier:@"corporalSummarySegue" sender:nil];
+}
+
+- (IBAction)closeBtn:(id)sender {
+    [self.navigationController dismissViewControllerAnimated:YES completion:nil];
 }
 @end

@@ -125,10 +125,13 @@
     // Get the new view controller using [segue destinationViewController].
     // Pass the selected object to the new view controller.
     
-    UserInfoTherapistViewController* userInfoCtrl = [segue destinationViewController];
+    UserInfoTherapistViewController* userInfoCtrl = (UserInfoTherapistViewController*)[(UINavigationController*)[segue destinationViewController] topViewController];
     userInfoCtrl.anUser = userSelected;
     
 }
 
 
+- (IBAction)closeBtn:(id)sender {
+    [self.navigationController dismissViewControllerAnimated:YES completion:nil];
+}
 @end

@@ -14,5 +14,7 @@
 @property (nonatomic, strong) NSArray *users;
 
 
+- (IBAction)closeBtn:(id)sender;
+
 
 @end

@@ -34,4 +34,6 @@
 
 - (IBAction)newCorpSumBtn:(id)sender;
 
+- (IBAction)closeBtn:(id)sender;
+
 @end
