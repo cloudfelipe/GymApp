@@ -37,6 +37,7 @@
     
     userCorporalSummaries = [_anUser.corporalsummaries allObjects];
     
+    self.title = @"Información del Usuario";
     
     
 }

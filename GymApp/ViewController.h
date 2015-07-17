@@ -12,5 +12,7 @@
 
 - (IBAction)signinBtn:(id)sender;
 
+- (IBAction)loginBtn:(id)sender;
+
 @end
 

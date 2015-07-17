@@ -14,7 +14,15 @@
 #import "AppDelegate.h"
 #import "User.h"
 
-@interface ViewController ()
+#import "UsersTableViewController.h"
+
+@interface ViewController (){
+    
+    __weak IBOutlet UITextField *userTextfield;
+    
+    __weak IBOutlet UISwitch *loginSwitch;
+    __weak IBOutlet UILabel *loginType;
+}
 
 @end
 
@@ -23,11 +31,25 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
+    
+    loginType.text = @"Doctor";
+    [loginSwitch addTarget:self action:@selector(changeSwitch:) forControlEvents:UIControlEventValueChanged];
+
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (void)changeSwitch:(id)sender{
+    if([sender isOn]){
+        loginType.text = @"Doctor";
+        userTextfield.text = @"Doctor12";
+    } else{
+        loginType.text = @"Instructor";
+        userTextfield.text = @"Instructor7";
+    }
 }
 
 - (IBAction)signinBtn:(id)sender {
@@ -111,6 +133,8 @@
         
     }];
     
+    formVC.title = @"Registro";
+    
     [formVC setTitleForHeaderInSectionBlock:^NSString *(NSInteger section) {
         
         switch (section) {
@@ -127,7 +151,19 @@
     }];
     
     UINavigationController *formNC = [[UINavigationController alloc] initWithRootViewController:formVC];
+    formVC.navigationController.navigationBar.barTintColor = [UIColor blackColor];
+    formVC.navigationController.navigationBar.tintColor = [UIColor whiteColor];
+    formVC.navigationController.toolbar.barTintColor = [UIColor blackColor];
     [self presentViewController:formNC animated:YES completion:nil];
     
+}
+
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
+    UINavigationController* navCtrl = [segue destinationViewController];
+    UsersTableViewController* userCtrl = (UsersTableViewController*)[navCtrl topViewController];
+    userCtrl.isADoctorLogined = loginSwitch.on;
+}
+
+- (IBAction)loginBtn:(id)sender {
 }
 @end

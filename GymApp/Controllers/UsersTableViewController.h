@@ -12,6 +12,7 @@
 
 
 @property (nonatomic, strong) NSArray *users;
+@property (nonatomic) BOOL isADoctorLogined;
 
 
 - (IBAction)closeBtn:(id)sender;

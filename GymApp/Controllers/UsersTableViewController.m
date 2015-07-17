@@ -36,6 +36,8 @@
     self.users = [context executeFetchRequest:fetchRequest error:&error];
     self.title = @"Usuarios";
     
+    self.tableView.tableFooterView = [[UIView alloc] initWithFrame:CGRectZero];
+    self.tableView.backgroundColor = [UIColor blackColor];
     
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
@@ -78,7 +80,7 @@
     NSLog(@"%@",dateString);
     
     UILabel* nameLb = (UILabel*)[cell viewWithTag:1];
-    nameLb.text = user.name;
+    nameLb.text = [NSString stringWithFormat:@"%@ %@", user.name, user.lastsname];
     
     //NSLog(@"%ld",(long)[user.birthday da]);
 //    cell.textLabel.text = user.name;
@@ -114,7 +116,12 @@
     
     userSelected = [self.users objectAtIndex:[indexPath row]];
     
-    [self performSegueWithIdentifier:@"userInfoTherapistSegue" sender:nil];
+    if (self.isADoctorLogined) {
+        [self performSegueWithIdentifier:@"userInfoTherapistSegue" sender:nil];
+    }else{
+        [self performSegueWithIdentifier:@"userRutineSegue" sender:nil];
+    }
+    
 }
 
 
@@ -124,9 +131,13 @@
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     // Get the new view controller using [segue destinationViewController].
     // Pass the selected object to the new view controller.
+    if ([segue.identifier isEqualToString:@"userInfoTherapistSegue"]) {
+        UserInfoTherapistViewController* userInfoCtrl = (UserInfoTherapistViewController*)[(UINavigationController*)[segue destinationViewController] topViewController];
+        userInfoCtrl.anUser = userSelected;
+    }else if ([segue.identifier isEqualToString:@"userRutineSegue"]){
+        
+    }
     
-    UserInfoTherapistViewController* userInfoCtrl = (UserInfoTherapistViewController*)[(UINavigationController*)[segue destinationViewController] topViewController];
-    userInfoCtrl.anUser = userSelected;
     
 }
 

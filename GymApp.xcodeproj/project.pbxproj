@@ -21,6 +21,8 @@
 		5535861E1B0AC2BA0062F6C9 /* CorporalSummary.m in Sources */ = {isa = PBXBuildFile; fileRef = 5535861D1B0AC2BA0062F6C9 /* CorporalSummary.m */; };
 		553586241B0AC4D90062F6C9 /* UsersTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 553586231B0AC4D90062F6C9 /* UsersTableViewController.m */; };
 		553586271B0ADF070062F6C9 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = 553586261B0ADF070062F6C9 /* User.m */; };
+		55700E951B58A6D8001A17A1 /* gymapp_logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 55700E941B58A6D8001A17A1 /* gymapp_logo.png */; };
+		55700E981B58BBBF001A17A1 /* rutineListTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 55700E971B58BBBF001A17A1 /* rutineListTableViewController.m */; };
 		559271041B33CB9700CC0764 /* Therapist.m in Sources */ = {isa = PBXBuildFile; fileRef = 559271031B33CB9700CC0764 /* Therapist.m */; };
 		559271071B33CB9800CC0764 /* Routine.m in Sources */ = {isa = PBXBuildFile; fileRef = 559271061B33CB9800CC0764 /* Routine.m */; };
 		5592710A1B33CB9800CC0764 /* Trainer.m in Sources */ = {isa = PBXBuildFile; fileRef = 559271091B33CB9800CC0764 /* Trainer.m */; };
@@ -67,6 +69,9 @@
 		553586231B0AC4D90062F6C9 /* UsersTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UsersTableViewController.m; path = Controllers/UsersTableViewController.m; sourceTree = "<group>"; };
 		553586251B0ADF070062F6C9 /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = User.h; path = Model/DAO/User.h; sourceTree = "<group>"; };
 		553586261B0ADF070062F6C9 /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = User.m; path = Model/DAO/User.m; sourceTree = "<group>"; };
+		55700E941B58A6D8001A17A1 /* gymapp_logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = gymapp_logo.png; sourceTree = "<group>"; };
+		55700E961B58BBBF001A17A1 /* rutineListTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = rutineListTableViewController.h; path = Controllers/rutineListTableViewController.h; sourceTree = "<group>"; };
+		55700E971B58BBBF001A17A1 /* rutineListTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = rutineListTableViewController.m; path = Controllers/rutineListTableViewController.m; sourceTree = "<group>"; };
 		559271021B33CB9700CC0764 /* Therapist.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Therapist.h; path = Model/DAO/Therapist.h; sourceTree = "<group>"; };
 		559271031B33CB9700CC0764 /* Therapist.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Therapist.m; path = Model/DAO/Therapist.m; sourceTree = "<group>"; };
 		559271051B33CB9800CC0764 /* Routine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Routine.h; path = Model/DAO/Routine.h; sourceTree = "<group>"; };
@@ -159,6 +164,7 @@
 		553585E61B0AAC980062F6C9 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				55700E941B58A6D8001A17A1 /* gymapp_logo.png */,
 				553585E71B0AAC980062F6C9 /* Info.plist */,
 				553585E81B0AAC980062F6C9 /* main.m */,
 			);
@@ -229,6 +235,8 @@
 				A5A991D21B31E30000937927 /* UserInfoTherapistViewController.m */,
 				A5A991D41B320C1900937927 /* CorporalSummaryTableViewController.h */,
 				A5A991D51B320C1900937927 /* CorporalSummaryTableViewController.m */,
+				55700E961B58BBBF001A17A1 /* rutineListTableViewController.h */,
+				55700E971B58BBBF001A17A1 /* rutineListTableViewController.m */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -316,6 +324,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				55700E951B58A6D8001A17A1 /* gymapp_logo.png in Resources */,
 				553585F51B0AAC980062F6C9 /* Main.storyboard in Resources */,
 				553585FA1B0AAC980062F6C9 /* LaunchScreen.xib in Resources */,
 				553585F71B0AAC980062F6C9 /* Images.xcassets in Resources */,
@@ -373,6 +382,7 @@
 				553585EF1B0AAC980062F6C9 /* GymApp.xcdatamodeld in Sources */,
 				553586161B0ABAAB0062F6C9 /* MAFormField.m in Sources */,
 				5535861E1B0AC2BA0062F6C9 /* CorporalSummary.m in Sources */,
+				55700E981B58BBBF001A17A1 /* rutineListTableViewController.m in Sources */,
 				559271071B33CB9800CC0764 /* Routine.m in Sources */,
 				A5A991D31B31E30000937927 /* UserInfoTherapistViewController.m in Sources */,
 				5592710A1B33CB9800CC0764 /* Trainer.m in Sources */,

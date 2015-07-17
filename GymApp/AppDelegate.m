@@ -61,6 +61,18 @@
      
      **/
     
+//    [[UIButton appearance] setBackgroundColor:[UIColor blackColor]];
+    [[UIButton appearance] setTintColor:[UIColor whiteColor]];
+    [[UIBarButtonItem appearance] setTintColor:[UIColor whiteColor]];
+    [[UINavigationBar appearance] setBarTintColor:[UIColor blackColor]];
+    [[UINavigationBar appearance] setTranslucent:NO];
+    [[UINavigationBar appearance] setTintColor:[UIColor whiteColor]];
+    [[UIToolbar appearance] setBackgroundColor:[UIColor blackColor]];
+    
+    [[UINavigationBar appearance] setTitleTextAttributes: [NSDictionary dictionaryWithObjectsAndKeys:
+                                                           [UIColor whiteColor], NSForegroundColorAttributeName,
+                                                           [UIFont fontWithName:@"HelveticaNeue-CondensedBlack" size:20.0], NSFontAttributeName, nil]];
+    
     return YES;
 }
 
