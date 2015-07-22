@@ -8,7 +8,10 @@
 
 #import "rutineListTableViewController.h"
 
-@interface rutineListTableViewController (){
+#import "SeriesAndLoopsViewController.h"
+#import "MZFormSheetPresentationController.h"
+
+@interface rutineListTableViewController ()<SeriesAndLoopsViewControllerDelegate>{
     NSArray* excersiceList;
 }
 
@@ -59,6 +62,23 @@
     return cell;
 }
 
+#pragma mark - UITableView delegate
+
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    
+    SeriesAndLoopsViewController* seriesCtrl = [self.storyboard instantiateViewControllerWithIdentifier:@"seriesAndRepsModal"];
+    seriesCtrl.delegate = self;
+    
+    MZFormSheetPresentationController *formSheetController = [[MZFormSheetPresentationController alloc] initWithContentViewController:seriesCtrl];
+    formSheetController.contentViewSize = CGSizeMake(320, 298);
+    formSheetController.shouldCenterVertically = YES;
+    formSheetController.shouldApplyBackgroundBlurEffect = YES;
+    formSheetController.contentViewControllerTransitionStyle = MZFormSheetPresentationTransitionStyleBounce;
+    
+    
+    [self presentViewController:formSheetController animated:YES completion:nil];
+    
+}
 
 /*
 // Override to support conditional editing of the table view.

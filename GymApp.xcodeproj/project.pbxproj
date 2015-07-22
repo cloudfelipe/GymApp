@@ -26,6 +26,13 @@
 		559271041B33CB9700CC0764 /* Therapist.m in Sources */ = {isa = PBXBuildFile; fileRef = 559271031B33CB9700CC0764 /* Therapist.m */; };
 		559271071B33CB9800CC0764 /* Routine.m in Sources */ = {isa = PBXBuildFile; fileRef = 559271061B33CB9800CC0764 /* Routine.m */; };
 		5592710A1B33CB9800CC0764 /* Trainer.m in Sources */ = {isa = PBXBuildFile; fileRef = 559271091B33CB9800CC0764 /* Trainer.m */; };
+		55D871561B5F4817001FD741 /* SeriesAndLoopsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 55D871551B5F4817001FD741 /* SeriesAndLoopsViewController.m */; };
+		55D871651B5F4FC7001FD741 /* MZBlurEffectAdapter.m in Sources */ = {isa = PBXBuildFile; fileRef = 55D871591B5F4FC7001FD741 /* MZBlurEffectAdapter.m */; };
+		55D871661B5F4FC7001FD741 /* MZFormSheetPresentationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 55D8715C1B5F4FC7001FD741 /* MZFormSheetPresentationController.m */; };
+		55D871671B5F4FC7001FD741 /* MZFormSheetPresentationControllerAnimator.m in Sources */ = {isa = PBXBuildFile; fileRef = 55D8715E1B5F4FC7001FD741 /* MZFormSheetPresentationControllerAnimator.m */; };
+		55D871681B5F4FC7001FD741 /* MZFormSheetPresentationControllerSegue.m in Sources */ = {isa = PBXBuildFile; fileRef = 55D871601B5F4FC7001FD741 /* MZFormSheetPresentationControllerSegue.m */; };
+		55D871691B5F4FC7001FD741 /* MZTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = 55D871621B5F4FC7001FD741 /* MZTransition.m */; };
+		55D8716A1B5F4FC7001FD741 /* UIViewController+TargetViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 55D871641B5F4FC7001FD741 /* UIViewController+TargetViewController.m */; };
 		7D5C993009D96E781BA5684B /* libPods-GymApp.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 85B82ED84D2DA2CA11D2DC1C /* libPods-GymApp.a */; };
 		A5A991D31B31E30000937927 /* UserInfoTherapistViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A5A991D21B31E30000937927 /* UserInfoTherapistViewController.m */; };
 		A5A991D61B320C1900937927 /* CorporalSummaryTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A5A991D51B320C1900937927 /* CorporalSummaryTableViewController.m */; };
@@ -78,6 +85,21 @@
 		559271061B33CB9800CC0764 /* Routine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Routine.m; path = Model/DAO/Routine.m; sourceTree = "<group>"; };
 		559271081B33CB9800CC0764 /* Trainer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Trainer.h; path = Model/DAO/Trainer.h; sourceTree = "<group>"; };
 		559271091B33CB9800CC0764 /* Trainer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Trainer.m; path = Model/DAO/Trainer.m; sourceTree = "<group>"; };
+		55D871541B5F4817001FD741 /* SeriesAndLoopsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SeriesAndLoopsViewController.h; path = Controllers/SeriesAndLoopsViewController.h; sourceTree = "<group>"; };
+		55D871551B5F4817001FD741 /* SeriesAndLoopsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SeriesAndLoopsViewController.m; path = Controllers/SeriesAndLoopsViewController.m; sourceTree = "<group>"; };
+		55D871581B5F4FC7001FD741 /* MZBlurEffectAdapter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MZBlurEffectAdapter.h; sourceTree = "<group>"; };
+		55D871591B5F4FC7001FD741 /* MZBlurEffectAdapter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MZBlurEffectAdapter.m; sourceTree = "<group>"; };
+		55D8715A1B5F4FC7001FD741 /* MZFormSheetPresentationController Swift Example-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MZFormSheetPresentationController Swift Example-Bridging-Header.h"; sourceTree = "<group>"; };
+		55D8715B1B5F4FC7001FD741 /* MZFormSheetPresentationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MZFormSheetPresentationController.h; sourceTree = "<group>"; };
+		55D8715C1B5F4FC7001FD741 /* MZFormSheetPresentationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MZFormSheetPresentationController.m; sourceTree = "<group>"; };
+		55D8715D1B5F4FC7001FD741 /* MZFormSheetPresentationControllerAnimator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MZFormSheetPresentationControllerAnimator.h; sourceTree = "<group>"; };
+		55D8715E1B5F4FC7001FD741 /* MZFormSheetPresentationControllerAnimator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MZFormSheetPresentationControllerAnimator.m; sourceTree = "<group>"; };
+		55D8715F1B5F4FC7001FD741 /* MZFormSheetPresentationControllerSegue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MZFormSheetPresentationControllerSegue.h; sourceTree = "<group>"; };
+		55D871601B5F4FC7001FD741 /* MZFormSheetPresentationControllerSegue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MZFormSheetPresentationControllerSegue.m; sourceTree = "<group>"; };
+		55D871611B5F4FC7001FD741 /* MZTransition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MZTransition.h; sourceTree = "<group>"; };
+		55D871621B5F4FC7001FD741 /* MZTransition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MZTransition.m; sourceTree = "<group>"; };
+		55D871631B5F4FC7001FD741 /* UIViewController+TargetViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+TargetViewController.h"; sourceTree = "<group>"; };
+		55D871641B5F4FC7001FD741 /* UIViewController+TargetViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+TargetViewController.m"; sourceTree = "<group>"; };
 		5F2DD7E3B78F2C9D6477FAA1 /* Pods-GymApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GymApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-GymApp/Pods-GymApp.release.xcconfig"; sourceTree = "<group>"; };
 		85B82ED84D2DA2CA11D2DC1C /* libPods-GymApp.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-GymApp.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A5A991D11B31E30000937927 /* UserInfoTherapistViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UserInfoTherapistViewController.h; path = Controllers/UserInfoTherapistViewController.h; sourceTree = "<group>"; };
@@ -145,6 +167,7 @@
 		553585E51B0AAC980062F6C9 /* GymApp */ = {
 			isa = PBXGroup;
 			children = (
+				55D871571B5F4FC7001FD741 /* MZFormSheetPresentationController */,
 				553586211B0AC4A30062F6C9 /* Controllers */,
 				5535861F1B0AC2C50062F6C9 /* Model */,
 				5535860F1B0ABA930062F6C9 /* MAFormControllers */,
@@ -237,8 +260,30 @@
 				A5A991D51B320C1900937927 /* CorporalSummaryTableViewController.m */,
 				55700E961B58BBBF001A17A1 /* rutineListTableViewController.h */,
 				55700E971B58BBBF001A17A1 /* rutineListTableViewController.m */,
+				55D871541B5F4817001FD741 /* SeriesAndLoopsViewController.h */,
+				55D871551B5F4817001FD741 /* SeriesAndLoopsViewController.m */,
 			);
 			name = Controllers;
+			sourceTree = "<group>";
+		};
+		55D871571B5F4FC7001FD741 /* MZFormSheetPresentationController */ = {
+			isa = PBXGroup;
+			children = (
+				55D871581B5F4FC7001FD741 /* MZBlurEffectAdapter.h */,
+				55D871591B5F4FC7001FD741 /* MZBlurEffectAdapter.m */,
+				55D8715A1B5F4FC7001FD741 /* MZFormSheetPresentationController Swift Example-Bridging-Header.h */,
+				55D8715B1B5F4FC7001FD741 /* MZFormSheetPresentationController.h */,
+				55D8715C1B5F4FC7001FD741 /* MZFormSheetPresentationController.m */,
+				55D8715D1B5F4FC7001FD741 /* MZFormSheetPresentationControllerAnimator.h */,
+				55D8715E1B5F4FC7001FD741 /* MZFormSheetPresentationControllerAnimator.m */,
+				55D8715F1B5F4FC7001FD741 /* MZFormSheetPresentationControllerSegue.h */,
+				55D871601B5F4FC7001FD741 /* MZFormSheetPresentationControllerSegue.m */,
+				55D871611B5F4FC7001FD741 /* MZTransition.h */,
+				55D871621B5F4FC7001FD741 /* MZTransition.m */,
+				55D871631B5F4FC7001FD741 /* UIViewController+TargetViewController.h */,
+				55D871641B5F4FC7001FD741 /* UIViewController+TargetViewController.m */,
+			);
+			path = MZFormSheetPresentationController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -380,14 +425,21 @@
 			files = (
 				553586271B0ADF070062F6C9 /* User.m in Sources */,
 				553585EF1B0AAC980062F6C9 /* GymApp.xcdatamodeld in Sources */,
+				55D871561B5F4817001FD741 /* SeriesAndLoopsViewController.m in Sources */,
 				553586161B0ABAAB0062F6C9 /* MAFormField.m in Sources */,
 				5535861E1B0AC2BA0062F6C9 /* CorporalSummary.m in Sources */,
 				55700E981B58BBBF001A17A1 /* rutineListTableViewController.m in Sources */,
+				55D871651B5F4FC7001FD741 /* MZBlurEffectAdapter.m in Sources */,
+				55D871691B5F4FC7001FD741 /* MZTransition.m in Sources */,
+				55D871681B5F4FC7001FD741 /* MZFormSheetPresentationControllerSegue.m in Sources */,
+				55D871661B5F4FC7001FD741 /* MZFormSheetPresentationController.m in Sources */,
 				559271071B33CB9800CC0764 /* Routine.m in Sources */,
 				A5A991D31B31E30000937927 /* UserInfoTherapistViewController.m in Sources */,
 				5592710A1B33CB9800CC0764 /* Trainer.m in Sources */,
+				55D8716A1B5F4FC7001FD741 /* UIViewController+TargetViewController.m in Sources */,
 				553585EC1B0AAC980062F6C9 /* AppDelegate.m in Sources */,
 				A5A991D61B320C1900937927 /* CorporalSummaryTableViewController.m in Sources */,
+				55D871671B5F4FC7001FD741 /* MZFormSheetPresentationControllerAnimator.m in Sources */,
 				553585F21B0AAC980062F6C9 /* ViewController.m in Sources */,
 				553586241B0AC4D90062F6C9 /* UsersTableViewController.m in Sources */,
 				553586171B0ABAAB0062F6C9 /* MAFormViewController.m in Sources */,

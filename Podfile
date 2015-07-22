@@ -5,6 +5,10 @@ target 'GymApp' do
 
 pod 'ActionSheetPicker-3.0'
 
+platform :ios, "8.0"
+pod 'MZAppearance'
+pod 'JGMethodSwizzler'
+
 end
 
 target 'GymAppTests' do
