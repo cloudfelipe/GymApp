@@ -70,7 +70,7 @@
     seriesCtrl.delegate = self;
     
     MZFormSheetPresentationController *formSheetController = [[MZFormSheetPresentationController alloc] initWithContentViewController:seriesCtrl];
-    formSheetController.contentViewSize = CGSizeMake(320, 298);
+    formSheetController.contentViewSize = CGSizeMake(340, 158);
     formSheetController.shouldCenterVertically = YES;
     formSheetController.shouldApplyBackgroundBlurEffect = YES;
     formSheetController.contentViewControllerTransitionStyle = MZFormSheetPresentationTransitionStyleBounce;
@@ -78,6 +78,10 @@
     
     [self presentViewController:formSheetController animated:YES completion:nil];
     
+}
+
+-(void)SeriesAndLoopsViewControllerDidSelectedSeries:(NSInteger)noSeries withReps:(NSInteger)noReps{
+    NSLog(@"Series: %ld, Rep: %ld", noSeries, noReps);
 }
 
 /*

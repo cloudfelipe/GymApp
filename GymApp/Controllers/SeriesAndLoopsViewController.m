@@ -54,11 +54,14 @@
 }
 
 - (IBAction)cancelBtn:(id)sender {
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 - (IBAction)doneBtn:(id)sender {
     
     [self.delegate SeriesAndLoopsViewControllerDidSelectedSeries:seriesSTP.value withReps:respSTP.value];
+    
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 - (IBAction)seriesSTP:(UIStepper *)sender {
