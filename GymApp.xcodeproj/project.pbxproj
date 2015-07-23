@@ -18,14 +18,16 @@
 		553586161B0ABAAB0062F6C9 /* MAFormField.m in Sources */ = {isa = PBXBuildFile; fileRef = 553586111B0ABAAB0062F6C9 /* MAFormField.m */; };
 		553586171B0ABAAB0062F6C9 /* MAFormViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 553586131B0ABAAB0062F6C9 /* MAFormViewController.m */; };
 		553586181B0ABAAB0062F6C9 /* MATextFieldCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 553586151B0ABAAB0062F6C9 /* MATextFieldCell.m */; };
-		5535861E1B0AC2BA0062F6C9 /* CorporalSummary.m in Sources */ = {isa = PBXBuildFile; fileRef = 5535861D1B0AC2BA0062F6C9 /* CorporalSummary.m */; };
 		553586241B0AC4D90062F6C9 /* UsersTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 553586231B0AC4D90062F6C9 /* UsersTableViewController.m */; };
-		553586271B0ADF070062F6C9 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = 553586261B0ADF070062F6C9 /* User.m */; };
 		55700E951B58A6D8001A17A1 /* gymapp_logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 55700E941B58A6D8001A17A1 /* gymapp_logo.png */; };
 		55700E981B58BBBF001A17A1 /* rutineListTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 55700E971B58BBBF001A17A1 /* rutineListTableViewController.m */; };
-		559271041B33CB9700CC0764 /* Therapist.m in Sources */ = {isa = PBXBuildFile; fileRef = 559271031B33CB9700CC0764 /* Therapist.m */; };
-		559271071B33CB9800CC0764 /* Routine.m in Sources */ = {isa = PBXBuildFile; fileRef = 559271061B33CB9800CC0764 /* Routine.m */; };
-		5592710A1B33CB9800CC0764 /* Trainer.m in Sources */ = {isa = PBXBuildFile; fileRef = 559271091B33CB9800CC0764 /* Trainer.m */; };
+		557341961B607DDC00B0904F /* RutineExcersiceTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 557341951B607DDC00B0904F /* RutineExcersiceTableViewController.m */; };
+		557341991B6093C200B0904F /* Routine.m in Sources */ = {isa = PBXBuildFile; fileRef = 557341981B6093C200B0904F /* Routine.m */; };
+		5573419C1B6093C300B0904F /* Trainer.m in Sources */ = {isa = PBXBuildFile; fileRef = 5573419B1B6093C300B0904F /* Trainer.m */; };
+		5573419F1B6093C300B0904F /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = 5573419E1B6093C300B0904F /* User.m */; };
+		557341A21B6093C300B0904F /* Exercise.m in Sources */ = {isa = PBXBuildFile; fileRef = 557341A11B6093C300B0904F /* Exercise.m */; };
+		557341A51B6093C300B0904F /* Therapist.m in Sources */ = {isa = PBXBuildFile; fileRef = 557341A41B6093C300B0904F /* Therapist.m */; };
+		557341A81B6093C300B0904F /* CorporalSummary.m in Sources */ = {isa = PBXBuildFile; fileRef = 557341A71B6093C300B0904F /* CorporalSummary.m */; };
 		55D871561B5F4817001FD741 /* SeriesAndLoopsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 55D871551B5F4817001FD741 /* SeriesAndLoopsViewController.m */; };
 		55D871651B5F4FC7001FD741 /* MZBlurEffectAdapter.m in Sources */ = {isa = PBXBuildFile; fileRef = 55D871591B5F4FC7001FD741 /* MZBlurEffectAdapter.m */; };
 		55D871661B5F4FC7001FD741 /* MZFormSheetPresentationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 55D8715C1B5F4FC7001FD741 /* MZFormSheetPresentationController.m */; };
@@ -70,21 +72,25 @@
 		553586131B0ABAAB0062F6C9 /* MAFormViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MAFormViewController.m; sourceTree = "<group>"; };
 		553586141B0ABAAB0062F6C9 /* MATextFieldCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MATextFieldCell.h; sourceTree = "<group>"; };
 		553586151B0ABAAB0062F6C9 /* MATextFieldCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MATextFieldCell.m; sourceTree = "<group>"; };
-		5535861C1B0AC2BA0062F6C9 /* CorporalSummary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CorporalSummary.h; path = Model/DAO/CorporalSummary.h; sourceTree = "<group>"; };
-		5535861D1B0AC2BA0062F6C9 /* CorporalSummary.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CorporalSummary.m; path = Model/DAO/CorporalSummary.m; sourceTree = "<group>"; };
 		553586221B0AC4D90062F6C9 /* UsersTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UsersTableViewController.h; path = Controllers/UsersTableViewController.h; sourceTree = "<group>"; };
 		553586231B0AC4D90062F6C9 /* UsersTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UsersTableViewController.m; path = Controllers/UsersTableViewController.m; sourceTree = "<group>"; };
-		553586251B0ADF070062F6C9 /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = User.h; path = Model/DAO/User.h; sourceTree = "<group>"; };
-		553586261B0ADF070062F6C9 /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = User.m; path = Model/DAO/User.m; sourceTree = "<group>"; };
 		55700E941B58A6D8001A17A1 /* gymapp_logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = gymapp_logo.png; sourceTree = "<group>"; };
 		55700E961B58BBBF001A17A1 /* rutineListTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = rutineListTableViewController.h; path = Controllers/rutineListTableViewController.h; sourceTree = "<group>"; };
 		55700E971B58BBBF001A17A1 /* rutineListTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = rutineListTableViewController.m; path = Controllers/rutineListTableViewController.m; sourceTree = "<group>"; };
-		559271021B33CB9700CC0764 /* Therapist.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Therapist.h; path = Model/DAO/Therapist.h; sourceTree = "<group>"; };
-		559271031B33CB9700CC0764 /* Therapist.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Therapist.m; path = Model/DAO/Therapist.m; sourceTree = "<group>"; };
-		559271051B33CB9800CC0764 /* Routine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Routine.h; path = Model/DAO/Routine.h; sourceTree = "<group>"; };
-		559271061B33CB9800CC0764 /* Routine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Routine.m; path = Model/DAO/Routine.m; sourceTree = "<group>"; };
-		559271081B33CB9800CC0764 /* Trainer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Trainer.h; path = Model/DAO/Trainer.h; sourceTree = "<group>"; };
-		559271091B33CB9800CC0764 /* Trainer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Trainer.m; path = Model/DAO/Trainer.m; sourceTree = "<group>"; };
+		557341941B607DDC00B0904F /* RutineExcersiceTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RutineExcersiceTableViewController.h; path = Controllers/RutineExcersiceTableViewController.h; sourceTree = "<group>"; };
+		557341951B607DDC00B0904F /* RutineExcersiceTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RutineExcersiceTableViewController.m; path = Controllers/RutineExcersiceTableViewController.m; sourceTree = "<group>"; };
+		557341971B6093C200B0904F /* Routine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Routine.h; path = Model/Routine.h; sourceTree = "<group>"; };
+		557341981B6093C200B0904F /* Routine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Routine.m; path = Model/Routine.m; sourceTree = "<group>"; };
+		5573419A1B6093C300B0904F /* Trainer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Trainer.h; path = Model/Trainer.h; sourceTree = "<group>"; };
+		5573419B1B6093C300B0904F /* Trainer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Trainer.m; path = Model/Trainer.m; sourceTree = "<group>"; };
+		5573419D1B6093C300B0904F /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = User.h; path = Model/User.h; sourceTree = "<group>"; };
+		5573419E1B6093C300B0904F /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = User.m; path = Model/User.m; sourceTree = "<group>"; };
+		557341A01B6093C300B0904F /* Exercise.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Exercise.h; path = Model/Exercise.h; sourceTree = "<group>"; };
+		557341A11B6093C300B0904F /* Exercise.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Exercise.m; path = Model/Exercise.m; sourceTree = "<group>"; };
+		557341A31B6093C300B0904F /* Therapist.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Therapist.h; path = Model/Therapist.h; sourceTree = "<group>"; };
+		557341A41B6093C300B0904F /* Therapist.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Therapist.m; path = Model/Therapist.m; sourceTree = "<group>"; };
+		557341A61B6093C300B0904F /* CorporalSummary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CorporalSummary.h; path = Model/CorporalSummary.h; sourceTree = "<group>"; };
+		557341A71B6093C300B0904F /* CorporalSummary.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CorporalSummary.m; path = Model/CorporalSummary.m; sourceTree = "<group>"; };
 		55D871541B5F4817001FD741 /* SeriesAndLoopsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SeriesAndLoopsViewController.h; path = Controllers/SeriesAndLoopsViewController.h; sourceTree = "<group>"; };
 		55D871551B5F4817001FD741 /* SeriesAndLoopsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SeriesAndLoopsViewController.m; path = Controllers/SeriesAndLoopsViewController.m; sourceTree = "<group>"; };
 		55D871581B5F4FC7001FD741 /* MZBlurEffectAdapter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MZBlurEffectAdapter.h; sourceTree = "<group>"; };
@@ -235,16 +241,18 @@
 		553586201B0AC2CB0062F6C9 /* DAO */ = {
 			isa = PBXGroup;
 			children = (
-				559271081B33CB9800CC0764 /* Trainer.h */,
-				559271091B33CB9800CC0764 /* Trainer.m */,
-				559271051B33CB9800CC0764 /* Routine.h */,
-				559271061B33CB9800CC0764 /* Routine.m */,
-				559271021B33CB9700CC0764 /* Therapist.h */,
-				559271031B33CB9700CC0764 /* Therapist.m */,
-				553586251B0ADF070062F6C9 /* User.h */,
-				553586261B0ADF070062F6C9 /* User.m */,
-				5535861C1B0AC2BA0062F6C9 /* CorporalSummary.h */,
-				5535861D1B0AC2BA0062F6C9 /* CorporalSummary.m */,
+				557341A61B6093C300B0904F /* CorporalSummary.h */,
+				557341A71B6093C300B0904F /* CorporalSummary.m */,
+				557341A31B6093C300B0904F /* Therapist.h */,
+				557341A41B6093C300B0904F /* Therapist.m */,
+				557341A01B6093C300B0904F /* Exercise.h */,
+				557341A11B6093C300B0904F /* Exercise.m */,
+				5573419D1B6093C300B0904F /* User.h */,
+				5573419E1B6093C300B0904F /* User.m */,
+				5573419A1B6093C300B0904F /* Trainer.h */,
+				5573419B1B6093C300B0904F /* Trainer.m */,
+				557341971B6093C200B0904F /* Routine.h */,
+				557341981B6093C200B0904F /* Routine.m */,
 			);
 			name = DAO;
 			sourceTree = "<group>";
@@ -262,6 +270,8 @@
 				55700E971B58BBBF001A17A1 /* rutineListTableViewController.m */,
 				55D871541B5F4817001FD741 /* SeriesAndLoopsViewController.h */,
 				55D871551B5F4817001FD741 /* SeriesAndLoopsViewController.m */,
+				557341941B607DDC00B0904F /* RutineExcersiceTableViewController.h */,
+				557341951B607DDC00B0904F /* RutineExcersiceTableViewController.m */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -423,27 +433,29 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				553586271B0ADF070062F6C9 /* User.m in Sources */,
 				553585EF1B0AAC980062F6C9 /* GymApp.xcdatamodeld in Sources */,
 				55D871561B5F4817001FD741 /* SeriesAndLoopsViewController.m in Sources */,
+				557341991B6093C200B0904F /* Routine.m in Sources */,
 				553586161B0ABAAB0062F6C9 /* MAFormField.m in Sources */,
-				5535861E1B0AC2BA0062F6C9 /* CorporalSummary.m in Sources */,
 				55700E981B58BBBF001A17A1 /* rutineListTableViewController.m in Sources */,
 				55D871651B5F4FC7001FD741 /* MZBlurEffectAdapter.m in Sources */,
+				5573419F1B6093C300B0904F /* User.m in Sources */,
+				5573419C1B6093C300B0904F /* Trainer.m in Sources */,
 				55D871691B5F4FC7001FD741 /* MZTransition.m in Sources */,
+				557341961B607DDC00B0904F /* RutineExcersiceTableViewController.m in Sources */,
 				55D871681B5F4FC7001FD741 /* MZFormSheetPresentationControllerSegue.m in Sources */,
 				55D871661B5F4FC7001FD741 /* MZFormSheetPresentationController.m in Sources */,
-				559271071B33CB9800CC0764 /* Routine.m in Sources */,
+				557341A81B6093C300B0904F /* CorporalSummary.m in Sources */,
 				A5A991D31B31E30000937927 /* UserInfoTherapistViewController.m in Sources */,
-				5592710A1B33CB9800CC0764 /* Trainer.m in Sources */,
 				55D8716A1B5F4FC7001FD741 /* UIViewController+TargetViewController.m in Sources */,
 				553585EC1B0AAC980062F6C9 /* AppDelegate.m in Sources */,
+				557341A21B6093C300B0904F /* Exercise.m in Sources */,
 				A5A991D61B320C1900937927 /* CorporalSummaryTableViewController.m in Sources */,
 				55D871671B5F4FC7001FD741 /* MZFormSheetPresentationControllerAnimator.m in Sources */,
+				557341A51B6093C300B0904F /* Therapist.m in Sources */,
 				553585F21B0AAC980062F6C9 /* ViewController.m in Sources */,
 				553586241B0AC4D90062F6C9 /* UsersTableViewController.m in Sources */,
 				553586171B0ABAAB0062F6C9 /* MAFormViewController.m in Sources */,
-				559271041B33CB9700CC0764 /* Therapist.m in Sources */,
 				553585E91B0AAC980062F6C9 /* main.m in Sources */,
 				553586181B0ABAAB0062F6C9 /* MATextFieldCell.m in Sources */,
 			);

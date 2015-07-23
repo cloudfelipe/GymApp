@@ -8,6 +8,15 @@
 
 #import <UIKit/UIKit.h>
 
+@class User;
+
 @interface rutineListTableViewController : UITableViewController
+
+
+@property (nonatomic, strong) User* currentUser;
+
+- (IBAction)saveRoutine:(id)sender;
+- (IBAction)closeBtn:(id)sender;
+
 
 @end

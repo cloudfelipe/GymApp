@@ -2,7 +2,7 @@
 //  Therapist.m
 //  GymApp
 //
-//  Created by Felipe Correa on 18/06/15.
+//  Created by Felipe Correa on 22/07/15.
 //  Copyright (c) 2015 Reyes Magos. All rights reserved.
 //
 

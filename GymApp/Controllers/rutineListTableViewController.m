@@ -8,11 +8,20 @@
 
 #import "rutineListTableViewController.h"
 
-#import "SeriesAndLoopsViewController.h"
-#import "MZFormSheetPresentationController.h"
+#import "RutineExcersiceTableViewController.h"
+#import "Routine.h"
 
-@interface rutineListTableViewController ()<SeriesAndLoopsViewControllerDelegate>{
+#import "AppDelegate.h"
+
+#import "User.h";
+
+@interface rutineListTableViewController ()<RutineExcersiceTableViewControllerDelegate>{
     NSArray* excersiceList;
+    NSArray* excersicesList;
+    
+    Routine* currentRoutine;
+    
+    AppDelegate* appDelegate;
 }
 
 @end
@@ -23,7 +32,17 @@
     [super viewDidLoad];
     self.title = @"Asignar Rutina";
     
-    excersiceList = @[@"PECHO",@"ESPALDA",@"HOMBROS",@"BICEPS",@"TRICEPS",@"MUSLO",@"CADERA",@"PIERNA",@"ABDOMEN - CINTURA", @"ENTRENAMIENTO VASCULAR"];
+    appDelegate = [[UIApplication sharedApplication] delegate];
+    NSManagedObjectContext *context = [appDelegate managedObjectContext];
+    
+    currentRoutine = [NSEntityDescription insertNewObjectForEntityForName:@"Routine" inManagedObjectContext:context];
+    
+    currentRoutine.date = [[NSDate alloc] init];
+    currentRoutine.owner = self.currentUser;
+    
+    excersiceList = @[@"PECHO",@"ESPALDA",@"HOMBROS",@"BICEPS",@"TRICEPS",@"MUSLO",@"CADERA",@"PIERNA",@"ABDOMEN - CINTURA"];
+    
+    excersicesList = @[@[@"PRESS INCLINADO BARRA",@"PRESS PLANO CON MANCUERNA",@"PRESIÓN PECHO PLANO EXTREMO",@"PRESIÓN PECHO SENTADO",@"APERTURA MAQUINA SENTADO"],@[@"JALÓN POLEA ADELANTE ABIERTO",@"JALÓN POLEA ADELANTE CERRADO",@"REMO DE POLEA",@"JALÓN ADELTANTE EXTREMO",@"REMO PALANCA BAJA EXTREMO", @"REMO MÁQUINA"],@[@"ELEVACIÓN LATERAL MÁQUINA",@"PRESS MILITAR CON MANCUERNA",@"ELEVACIÓN FRONTAL MANCUERAN",@"ELEVACIÓN POLEA FRONTAL",@"PRESS MILITAR EXTREMO"],@[@"FLEXIÓN EXTENSIÓN CODO POLEA",@"PREDICADOR MÁQUINA",@"FLEXIÓN EXTENSIÓN CODO BARRA",@"CURT CONCENTRACIÓN MANCUERNA",@"FLEXIÓN EXTENSION CODO"],@[@"EXTENSIÓN POLEA",@"EXTENSIÓN POLEA INDIVIDUAL",@"EXTENSIÓN CODO PARALELAS",@"COPA MANCUERNA",@"FONDOS"],@[@"EXTENSIÓN RODILLA",@"FLEXIÓN RODILLA SENTADO",@"PRENSA ATLÉTICA",@"ADUCTORES MÁQUINA SENTADO",@"ABDUCTOR MÁQUINA SENTADO"],@[@"SENTADILLA POWER INVERTIDA",@"RODILLO SUPERIOR",@"DE PIE ELEVADO CABLE ATRÁS",@"CUADRUPEDIA ELEVACIÓN"],@[@"PANTORRILLA SENTADO",@"PANTORRILLA INCLINADO",@"PANTORRILLA EN PRENSA",@"PANTORRILLA CON MANCUERNA"],@[@"CRUNCH",@"BANCA COMPLETA",@"LATERAL EN BANCO",@"ELEVACIÓN DE PIES",@"CRUNCH MÁQUINA PESO"]];
     
     self.tableView.tableFooterView = [[UIView alloc] initWithFrame:CGRectZero];
     self.tableView.backgroundColor = [UIColor blackColor];
@@ -66,22 +85,12 @@
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     
-    SeriesAndLoopsViewController* seriesCtrl = [self.storyboard instantiateViewControllerWithIdentifier:@"seriesAndRepsModal"];
-    seriesCtrl.delegate = self;
-    
-    MZFormSheetPresentationController *formSheetController = [[MZFormSheetPresentationController alloc] initWithContentViewController:seriesCtrl];
-    formSheetController.contentViewSize = CGSizeMake(340, 158);
-    formSheetController.shouldCenterVertically = YES;
-    formSheetController.shouldApplyBackgroundBlurEffect = YES;
-    formSheetController.contentViewControllerTransitionStyle = MZFormSheetPresentationTransitionStyleBounce;
-    
-    
-    [self presentViewController:formSheetController animated:YES completion:nil];
+    [self performSegueWithIdentifier:@"excersiceCtrl" sender:[NSNumber numberWithInteger:indexPath.row]];
     
 }
 
--(void)SeriesAndLoopsViewControllerDidSelectedSeries:(NSInteger)noSeries withReps:(NSInteger)noReps{
-    NSLog(@"Series: %ld, Rep: %ld", noSeries, noReps);
+-(void)RutineExcersiceTableViewControllerDidSelectedExercise:(Exercise *)newExercise{
+    [currentRoutine addExercisesObject:newExercise];
 }
 
 /*
@@ -118,14 +127,50 @@
 }
 */
 
-/*
+
 #pragma mark - Navigation
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     // Get the new view controller using [segue destinationViewController].
     // Pass the selected object to the new view controller.
+    
+    RutineExcersiceTableViewController* exerciseCtrl = (RutineExcersiceTableViewController*)[segue destinationViewController];
+    exerciseCtrl.delegate = self;
+    exerciseCtrl.excersicesList = [excersicesList objectAtIndex:[sender integerValue]];
+    exerciseCtrl.exerciseName = [excersiceList objectAtIndex:[sender integerValue]];
+    exerciseCtrl.exerciseType = [sender integerValue];
+    
+    exerciseCtrl.selectedExcersiceList = [[currentRoutine.exercises allObjects] mutableCopy];
+    
 }
-*/
 
+
+- (IBAction)saveRoutine:(id)sender {
+    
+    
+    
+    
+    NSManagedObjectContext *context = [appDelegate managedObjectContext];
+    
+    NSError *error;
+    if (![context save:&error]) {
+        NSLog(@"Nooo, error al grabar: %@", [error localizedDescription]);
+    }else{
+        // do whatever you want with the results - you can access specific values from the dictionary using
+        // the key you provided when you created the form
+        
+//        [self.delegate CorporalSummaryTableViewControllerDidSave:self didNewCorporalSummary:aCorporalSummary];
+        
+        // now that we're done, dismiss the form
+        [self dismissViewControllerAnimated:YES completion:nil];
+    }
+    
+    
+}
+
+- (IBAction)closeBtn:(id)sender {
+    
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
 @end

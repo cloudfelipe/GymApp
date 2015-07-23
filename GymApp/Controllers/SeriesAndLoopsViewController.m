@@ -59,7 +59,7 @@
 
 - (IBAction)doneBtn:(id)sender {
     
-    [self.delegate SeriesAndLoopsViewControllerDidSelectedSeries:seriesSTP.value withReps:respSTP.value];
+    [self.delegate SeriesAndLoopsViewControllerDidSelectedExercise:self.exerciseName withSeries:seriesSTP.value withReps:respSTP.value];
     
     [self dismissViewControllerAnimated:YES completion:nil];
 }

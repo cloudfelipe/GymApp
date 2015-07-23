@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="6254" systemVersion="14C109" minimumToolsVersion="Automatic" macOSVersion="Automatic" iOSVersion="Automatic">
+<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="7701" systemVersion="14C109" minimumToolsVersion="Automatic" macOSVersion="Automatic" iOSVersion="Automatic">
     <entity name="CorporalSummary" representedClassName="CorporalSummary" syncable="YES">
         <attribute name="additionalNote" optional="YES" attributeType="String" maxValueString="100" syncable="YES"/>
         <attribute name="arm" optional="YES" attributeType="Double" minValueString="0" maxValueString="500" defaultValueString="0.0" syncable="YES"/>
@@ -12,7 +12,16 @@
         <relationship name="owner" optional="YES" maxCount="1" deletionRule="Cascade" destinationEntity="User" inverseName="corporalsummaries" inverseEntity="User" syncable="YES"/>
         <relationship name="performed" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Therapist" inverseName="perform" inverseEntity="Therapist" syncable="YES"/>
     </entity>
+    <entity name="Exercise" representedClassName="Exercise" syncable="YES">
+        <attribute name="exerciseName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="exerciseType" optional="YES" attributeType="Integer 16" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="reps" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="series" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <relationship name="owner" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Routine" inverseName="exercises" inverseEntity="Routine" syncable="YES"/>
+    </entity>
     <entity name="Routine" representedClassName="Routine" syncable="YES">
+        <attribute name="date" optional="YES" attributeType="Date" syncable="YES"/>
+        <relationship name="exercises" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="Exercise" inverseName="owner" inverseEntity="Exercise" syncable="YES"/>
         <relationship name="owner" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="User" inverseName="routines" inverseEntity="User" syncable="YES"/>
         <relationship name="performed" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Trainer" inverseName="make" inverseEntity="Trainer" syncable="YES"/>
     </entity>
@@ -52,9 +61,10 @@
     </entity>
     <elements>
         <element name="CorporalSummary" positionX="-5159" positionY="-8649" width="128" height="193"/>
-        <element name="Routine" positionX="-5616" positionY="-8383" width="128" height="73"/>
+        <element name="Routine" positionX="-5616" positionY="-8383" width="128" height="103"/>
         <element name="Therapist" positionX="-5348" positionY="-8370" width="128" height="148"/>
         <element name="Trainer" positionX="-5661" positionY="-8632" width="128" height="133"/>
         <element name="User" positionX="-5364" positionY="-8694" width="128" height="268"/>
+        <element name="Exercise" positionX="-5796" positionY="-8298" width="128" height="118"/>
     </elements>
 </model>

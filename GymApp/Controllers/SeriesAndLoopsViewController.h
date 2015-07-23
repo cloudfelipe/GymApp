@@ -10,13 +10,15 @@
 
 @protocol SeriesAndLoopsViewControllerDelegate <NSObject>
 
--(void) SeriesAndLoopsViewControllerDidSelectedSeries:(NSInteger) noSeries withReps:(NSInteger) noReps;
+-(void) SeriesAndLoopsViewControllerDidSelectedExercise: (NSString*) exerciseName withSeries:(NSInteger) noSeries withReps:(NSInteger) noReps;
 
 @end
 
 @interface SeriesAndLoopsViewController : UIViewController
 
 @property (nonatomic, weak) id <SeriesAndLoopsViewControllerDelegate> delegate;
+
+@property (nonatomic, strong) NSString* exerciseName;
 
 - (IBAction)seriesSTP:(UIStepper *)sender;
 

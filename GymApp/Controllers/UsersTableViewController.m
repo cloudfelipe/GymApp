@@ -13,7 +13,9 @@
 
 #import "UserInfoTherapistViewController.h"
 
-@interface UsersTableViewController (){
+#import "rutineListTableViewController.h"
+
+@interface UsersTableViewController ()<UIActionSheetDelegate>{
     User * userSelected;
 }
 
@@ -119,7 +121,23 @@
     if (self.isADoctorLogined) {
         [self performSegueWithIdentifier:@"userInfoTherapistSegue" sender:nil];
     }else{
+        
+        UIActionSheet *actionSheet = [[UIActionSheet alloc] initWithTitle:@"¿Qué acción deseas hacer?"
+                                                                 delegate:self
+                                                        cancelButtonTitle:@"Cancelar"
+                                                   destructiveButtonTitle:nil
+                                                        otherButtonTitles:@"Crear Rutina", @"Ver Resumen Corporal", nil];
+        [actionSheet showInView:self.view];
+    }
+    
+}
+
+-(void)actionSheet:(UIActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex{
+    
+    if (buttonIndex == 0) {
         [self performSegueWithIdentifier:@"userRutineSegue" sender:nil];
+    }else{
+        //Ver resumen corporal view
     }
     
 }
@@ -136,6 +154,10 @@
         userInfoCtrl.anUser = userSelected;
     }else if ([segue.identifier isEqualToString:@"userRutineSegue"]){
         
+        UINavigationController* navCtrl = [segue destinationViewController];
+        
+        rutineListTableViewController* routineList = (rutineListTableViewController*)[navCtrl topViewController];
+        routineList.currentUser = userSelected;
     }
     
     
