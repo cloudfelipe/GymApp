@@ -16,6 +16,8 @@
 
 #import "UsersTableViewController.h"
 
+#import "UserLoginViewController.h"
+
 @interface ViewController (){
     
     __weak IBOutlet UITextField *userTextfield;
@@ -165,5 +167,12 @@
 }
 
 - (IBAction)loginBtn:(id)sender {
+}
+
+- (IBAction)segmentedControl:(UISegmentedControl *)sender {
+    
+    UserLoginViewController* userCtrl = [self.storyboard instantiateViewControllerWithIdentifier:@"userLoginCtrl"];
+    [self presentViewController:userCtrl animated:YES completion:nil];
+
 }
 @end

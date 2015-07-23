@@ -22,7 +22,7 @@
     
     
     //Test
-    NSManagedObjectContext *context = [self managedObjectContext];
+//    NSManagedObjectContext *context = [self managedObjectContext];
     
     /**
     
@@ -72,6 +72,8 @@
     [[UINavigationBar appearance] setTitleTextAttributes: [NSDictionary dictionaryWithObjectsAndKeys:
                                                            [UIColor whiteColor], NSForegroundColorAttributeName,
                                                            [UIFont fontWithName:@"HelveticaNeue-CondensedBlack" size:20.0], NSFontAttributeName, nil]];
+    
+    [[UISegmentedControl appearance] setTintColor:[UIColor blackColor]];
     
     return YES;
 }

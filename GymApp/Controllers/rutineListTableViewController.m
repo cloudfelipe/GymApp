@@ -13,7 +13,7 @@
 
 #import "AppDelegate.h"
 
-#import "User.h";
+#import "User.h"
 
 @interface rutineListTableViewController ()<RutineExcersiceTableViewControllerDelegate>{
     NSArray* excersiceList;

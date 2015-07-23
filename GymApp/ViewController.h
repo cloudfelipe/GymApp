@@ -14,5 +14,8 @@
 
 - (IBAction)loginBtn:(id)sender;
 
+
+- (IBAction)segmentedControl:(UISegmentedControl *)sender;
+
 @end
 

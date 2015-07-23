@@ -36,6 +36,7 @@
 		55D871691B5F4FC7001FD741 /* MZTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = 55D871621B5F4FC7001FD741 /* MZTransition.m */; };
 		55D8716A1B5F4FC7001FD741 /* UIViewController+TargetViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 55D871641B5F4FC7001FD741 /* UIViewController+TargetViewController.m */; };
 		7D5C993009D96E781BA5684B /* libPods-GymApp.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 85B82ED84D2DA2CA11D2DC1C /* libPods-GymApp.a */; };
+		A501F3EE1B614C3300335A24 /* UserLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A501F3ED1B614C3300335A24 /* UserLoginViewController.m */; };
 		A5A991D31B31E30000937927 /* UserInfoTherapistViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A5A991D21B31E30000937927 /* UserInfoTherapistViewController.m */; };
 		A5A991D61B320C1900937927 /* CorporalSummaryTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A5A991D51B320C1900937927 /* CorporalSummaryTableViewController.m */; };
 /* End PBXBuildFile section */
@@ -108,6 +109,8 @@
 		55D871641B5F4FC7001FD741 /* UIViewController+TargetViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+TargetViewController.m"; sourceTree = "<group>"; };
 		5F2DD7E3B78F2C9D6477FAA1 /* Pods-GymApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GymApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-GymApp/Pods-GymApp.release.xcconfig"; sourceTree = "<group>"; };
 		85B82ED84D2DA2CA11D2DC1C /* libPods-GymApp.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-GymApp.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A501F3EC1B614C3300335A24 /* UserLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UserLoginViewController.h; path = Controllers/UserLoginViewController.h; sourceTree = "<group>"; };
+		A501F3ED1B614C3300335A24 /* UserLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UserLoginViewController.m; path = Controllers/UserLoginViewController.m; sourceTree = "<group>"; };
 		A5A991D11B31E30000937927 /* UserInfoTherapistViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UserInfoTherapistViewController.h; path = Controllers/UserInfoTherapistViewController.h; sourceTree = "<group>"; };
 		A5A991D21B31E30000937927 /* UserInfoTherapistViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UserInfoTherapistViewController.m; path = Controllers/UserInfoTherapistViewController.m; sourceTree = "<group>"; };
 		A5A991D41B320C1900937927 /* CorporalSummaryTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CorporalSummaryTableViewController.h; path = Controllers/CorporalSummaryTableViewController.h; sourceTree = "<group>"; };
@@ -272,6 +275,8 @@
 				55D871551B5F4817001FD741 /* SeriesAndLoopsViewController.m */,
 				557341941B607DDC00B0904F /* RutineExcersiceTableViewController.h */,
 				557341951B607DDC00B0904F /* RutineExcersiceTableViewController.m */,
+				A501F3EC1B614C3300335A24 /* UserLoginViewController.h */,
+				A501F3ED1B614C3300335A24 /* UserLoginViewController.m */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -438,6 +443,7 @@
 				557341991B6093C200B0904F /* Routine.m in Sources */,
 				553586161B0ABAAB0062F6C9 /* MAFormField.m in Sources */,
 				55700E981B58BBBF001A17A1 /* rutineListTableViewController.m in Sources */,
+				A501F3EE1B614C3300335A24 /* UserLoginViewController.m in Sources */,
 				55D871651B5F4FC7001FD741 /* MZBlurEffectAdapter.m in Sources */,
 				5573419F1B6093C300B0904F /* User.m in Sources */,
 				5573419C1B6093C300B0904F /* Trainer.m in Sources */,
