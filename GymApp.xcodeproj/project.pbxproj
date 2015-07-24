@@ -35,6 +35,10 @@
 		55D871681B5F4FC7001FD741 /* MZFormSheetPresentationControllerSegue.m in Sources */ = {isa = PBXBuildFile; fileRef = 55D871601B5F4FC7001FD741 /* MZFormSheetPresentationControllerSegue.m */; };
 		55D871691B5F4FC7001FD741 /* MZTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = 55D871621B5F4FC7001FD741 /* MZTransition.m */; };
 		55D8716A1B5F4FC7001FD741 /* UIViewController+TargetViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 55D871641B5F4FC7001FD741 /* UIViewController+TargetViewController.m */; };
+		55FCDDA31B61FA6D00343D58 /* ejercicio-img.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 55FCDDA21B61FA6D00343D58 /* ejercicio-img.jpg */; };
+		55FCDDA61B61FCA600343D58 /* ExerciseViewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 55FCDDA51B61FCA600343D58 /* ExerciseViewViewController.m */; };
+		55FCDDA91B61FD0600343D58 /* UserRoutineTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 55FCDDA81B61FD0600343D58 /* UserRoutineTableViewController.m */; };
+		55FCDDAC1B61FD1900343D58 /* UserRoutineExerciseTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 55FCDDAB1B61FD1900343D58 /* UserRoutineExerciseTableViewController.m */; };
 		7D5C993009D96E781BA5684B /* libPods-GymApp.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 85B82ED84D2DA2CA11D2DC1C /* libPods-GymApp.a */; };
 		A501F3EE1B614C3300335A24 /* UserLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A501F3ED1B614C3300335A24 /* UserLoginViewController.m */; };
 		A5A991D31B31E30000937927 /* UserInfoTherapistViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A5A991D21B31E30000937927 /* UserInfoTherapistViewController.m */; };
@@ -107,6 +111,13 @@
 		55D871621B5F4FC7001FD741 /* MZTransition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MZTransition.m; sourceTree = "<group>"; };
 		55D871631B5F4FC7001FD741 /* UIViewController+TargetViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+TargetViewController.h"; sourceTree = "<group>"; };
 		55D871641B5F4FC7001FD741 /* UIViewController+TargetViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+TargetViewController.m"; sourceTree = "<group>"; };
+		55FCDDA21B61FA6D00343D58 /* ejercicio-img.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "ejercicio-img.jpg"; sourceTree = "<group>"; };
+		55FCDDA41B61FCA600343D58 /* ExerciseViewViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ExerciseViewViewController.h; path = Controllers/ExerciseViewViewController.h; sourceTree = "<group>"; };
+		55FCDDA51B61FCA600343D58 /* ExerciseViewViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ExerciseViewViewController.m; path = Controllers/ExerciseViewViewController.m; sourceTree = "<group>"; };
+		55FCDDA71B61FD0600343D58 /* UserRoutineTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UserRoutineTableViewController.h; path = Controllers/UserRoutineTableViewController.h; sourceTree = "<group>"; };
+		55FCDDA81B61FD0600343D58 /* UserRoutineTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UserRoutineTableViewController.m; path = Controllers/UserRoutineTableViewController.m; sourceTree = "<group>"; };
+		55FCDDAA1B61FD1900343D58 /* UserRoutineExerciseTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UserRoutineExerciseTableViewController.h; path = Controllers/UserRoutineExerciseTableViewController.h; sourceTree = "<group>"; };
+		55FCDDAB1B61FD1900343D58 /* UserRoutineExerciseTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UserRoutineExerciseTableViewController.m; path = Controllers/UserRoutineExerciseTableViewController.m; sourceTree = "<group>"; };
 		5F2DD7E3B78F2C9D6477FAA1 /* Pods-GymApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GymApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-GymApp/Pods-GymApp.release.xcconfig"; sourceTree = "<group>"; };
 		85B82ED84D2DA2CA11D2DC1C /* libPods-GymApp.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-GymApp.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A501F3EC1B614C3300335A24 /* UserLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UserLoginViewController.h; path = Controllers/UserLoginViewController.h; sourceTree = "<group>"; };
@@ -196,6 +207,7 @@
 		553585E61B0AAC980062F6C9 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				55FCDDA21B61FA6D00343D58 /* ejercicio-img.jpg */,
 				55700E941B58A6D8001A17A1 /* gymapp_logo.png */,
 				553585E71B0AAC980062F6C9 /* Info.plist */,
 				553585E81B0AAC980062F6C9 /* main.m */,
@@ -277,6 +289,12 @@
 				557341951B607DDC00B0904F /* RutineExcersiceTableViewController.m */,
 				A501F3EC1B614C3300335A24 /* UserLoginViewController.h */,
 				A501F3ED1B614C3300335A24 /* UserLoginViewController.m */,
+				55FCDDA71B61FD0600343D58 /* UserRoutineTableViewController.h */,
+				55FCDDA81B61FD0600343D58 /* UserRoutineTableViewController.m */,
+				55FCDDAA1B61FD1900343D58 /* UserRoutineExerciseTableViewController.h */,
+				55FCDDAB1B61FD1900343D58 /* UserRoutineExerciseTableViewController.m */,
+				55FCDDA41B61FCA600343D58 /* ExerciseViewViewController.h */,
+				55FCDDA51B61FCA600343D58 /* ExerciseViewViewController.m */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -384,6 +402,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				55FCDDA31B61FA6D00343D58 /* ejercicio-img.jpg in Resources */,
 				55700E951B58A6D8001A17A1 /* gymapp_logo.png in Resources */,
 				553585F51B0AAC980062F6C9 /* Main.storyboard in Resources */,
 				553585FA1B0AAC980062F6C9 /* LaunchScreen.xib in Resources */,
@@ -438,12 +457,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				55FCDDAC1B61FD1900343D58 /* UserRoutineExerciseTableViewController.m in Sources */,
 				553585EF1B0AAC980062F6C9 /* GymApp.xcdatamodeld in Sources */,
 				55D871561B5F4817001FD741 /* SeriesAndLoopsViewController.m in Sources */,
 				557341991B6093C200B0904F /* Routine.m in Sources */,
 				553586161B0ABAAB0062F6C9 /* MAFormField.m in Sources */,
 				55700E981B58BBBF001A17A1 /* rutineListTableViewController.m in Sources */,
 				A501F3EE1B614C3300335A24 /* UserLoginViewController.m in Sources */,
+				55FCDDA91B61FD0600343D58 /* UserRoutineTableViewController.m in Sources */,
 				55D871651B5F4FC7001FD741 /* MZBlurEffectAdapter.m in Sources */,
 				5573419F1B6093C300B0904F /* User.m in Sources */,
 				5573419C1B6093C300B0904F /* Trainer.m in Sources */,
@@ -451,6 +472,7 @@
 				557341961B607DDC00B0904F /* RutineExcersiceTableViewController.m in Sources */,
 				55D871681B5F4FC7001FD741 /* MZFormSheetPresentationControllerSegue.m in Sources */,
 				55D871661B5F4FC7001FD741 /* MZFormSheetPresentationController.m in Sources */,
+				55FCDDA61B61FCA600343D58 /* ExerciseViewViewController.m in Sources */,
 				557341A81B6093C300B0904F /* CorporalSummary.m in Sources */,
 				A5A991D31B31E30000937927 /* UserInfoTherapistViewController.m in Sources */,
 				55D8716A1B5F4FC7001FD741 /* UIViewController+TargetViewController.m in Sources */,
